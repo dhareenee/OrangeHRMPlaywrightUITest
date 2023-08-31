@@ -1,7 +1,7 @@
 const{test,expect}=require('@playwright/test')
 const{POManager}=require('../pageObjects/POManager')
 
-test('test',async ({page})=>{
+test('UserTable Validation',async ({page})=>{
 
     await page.goto("https://opensource-demo.orangehrmlive.com/");
     await page.waitForLoadState('networkidle');
@@ -32,7 +32,7 @@ await page.waitForLoadState('networkidle');
 
 
 
-test("hello",async ({browser})=>{
+test("Table and Child Table selection",async ({browser})=>{
   
   const context = await browser.newContext();
        const  page = await context.newPage();
@@ -50,7 +50,7 @@ test("hello",async ({browser})=>{
 })
 
 
-test ('Header Selection',async({page})=>{
+test ('HomePage to Module Navigation test',async({page})=>{
 
 
   await page.goto("https://opensource-demo.orangehrmlive.com/");
@@ -89,7 +89,7 @@ test ('Header Selection',async({page})=>{
 })
 
 
-test('Search test',async({browser})=>{
+test('HomePage Menu Option Validation',async({browser})=>{
   const context = await browser.newContext();
   const  page = await context.newPage();
    const poManager =  new POManager(page);
@@ -110,7 +110,7 @@ test('Search test',async({browser})=>{
   expect(model).toContain('OrangeHRM');
 })
 
-test('content',async({page})=>{
+test('Validate About Page Content',async({page})=>{
 
   
    const poManager =  new POManager(page);
